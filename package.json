@@ -1,0 +1,31 @@
+{
+  "name": "thin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@commitlint/config-conventional": "^8.1.0",
+    "commitlint": "^8.1.0",
+    "husky": "^3.0.1",
+    "typescript": "^3.7.2",
+    "zx": "^4.3.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "files": [
+    "dist/",
+    "*.md"
+  ]
+}
